@@ -69,7 +69,6 @@ title: "Gabriel Jones  "
             <h3 class="text-lg font-extrabold text-white">{{ post.title }}</h3>
             <p class="text-sm text-neutral-300">{{ post.excerpt | truncate(30, True, '...') }}</p>
             <div class="flex items-center justify-between text-xs text-neutral-400">
-              <span>{{ post.author }}</span>
               <span><i class="fa fa-clock"></i> {{ post.reading_time | default: "5" }} min</span>
             </div>
           </div>
