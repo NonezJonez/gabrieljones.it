@@ -36,8 +36,9 @@ title: "Gabriel Jones  "
       <img src="{{ featured.image }}" class="h-96 w-full object-cover group-hover:scale-105 transition-transform" />
       <div class="absolute inset-0 bg-gradient-to-t from-black via-black/30 to-transparent"></div>
       <div class="absolute bottom-0 p-6">
+        <p class="mt-2 text-neutral-200"><b>{{ page.author }} - {{ page.date }}</b></p>
         <h1 class="text-4xl font-extrabold text-white">{{ featured.title }}</h1>
-        <p class="mt-2 text-neutral-200">{{ featured.excerpt }}</p>
+        <p class="mt-2 text-neutral-200">{{ featured.excerpt | truncate(20, True, '...') }}</p>
       </div>
     </a>
     {% endif %}
@@ -66,7 +67,7 @@ title: "Gabriel Jones  "
           <img src="{{ post.image }}" alt="{{ post.title }}" class="h-48 w-full object-cover" />
           <div class="p-4 space-y-2">
             <h3 class="text-lg font-extrabold text-white">{{ post.title }}</h3>
-            <p class="text-sm text-neutral-300">{{ post.excerpt }}</p>
+            <p class="text-sm text-neutral-300">{{ post.excerpt | truncate(30, True, '...') }}</p>
             <div class="flex items-center justify-between text-xs text-neutral-400">
               <span>{{ post.author }}</span>
               <span><i class="fa fa-clock"></i> {{ post.reading_time | default: "5" }} min</span>
