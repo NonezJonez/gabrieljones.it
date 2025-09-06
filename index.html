@@ -1,6 +1,6 @@
 ---
 layout: none
-title: "Gabriel Jones  "
+title: "Gabriel Jones"
 ---
 <!DOCTYPE html>
 <html lang="it">
@@ -36,7 +36,6 @@ title: "Gabriel Jones  "
       <img src="{{ featured.image }}" class="h-96 w-full object-cover group-hover:scale-105 transition-transform" />
       <div class="absolute inset-0 bg-gradient-to-t from-black via-black/30 to-transparent"></div>
       <div class="absolute bottom-0 p-6">
-        <p class="mt-2 text-neutral-200">Posted By:<b> <a href="/authors/gabrieljones/">Gabriel Jones</a></b></p>
         <h1 class="text-4xl font-extrabold text-white">{{ featured.title }}</h1>
         <p class="mt-2 text-neutral-200">{{ featured.excerpt | truncate(20, True, '...') }}</p>
       </div>
@@ -68,9 +67,6 @@ title: "Gabriel Jones  "
           <div class="p-4 space-y-2">
             <h3 class="text-lg font-extrabold text-white">{{ post.title }}</h3>
             <p class="text-sm text-neutral-300">{{ post.excerpt | truncate(30, True, '...') }}</p>
-            <div class="flex items-center justify-between text-xs text-neutral-400">
-              <span><i class="fa fa-clock"></i> {{ post.reading_time | default: "5" }} min</span>
-            </div>
           </div>
         </a>
       </article>
@@ -80,7 +76,7 @@ title: "Gabriel Jones  "
 
   <!-- Footer -->
   <footer class="mt-16 border-t border-neutral-800 bg-black/60 py-6 text-center text-xs text-neutral-500">
-    © {{ site.time | date: "%Y" }} Gabriel Jones. Tutti i diritti riservati.
+    © Gabriel Jones. Tutti i diritti riservati.
   </footer>
 
 </body>
